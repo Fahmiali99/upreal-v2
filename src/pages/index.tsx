@@ -1,3 +1,14 @@
-import HomePage from "../modules/home";
+import Layout from "@/components/Layout";
+import HomePage from "@/modules/home";
 
-export default HomePage;
+export const Home = (): JSX.Element => {
+  return (
+    <>
+      <Layout>
+        <HomePage />
+      </Layout>
+    </>
+  );
+};
+
+export default Home;
