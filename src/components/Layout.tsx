@@ -7,7 +7,7 @@ type LayoutProps = {
 function Layout({ children }: LayoutProps): JSX.Element {
   return (
     <div>
-      <div className=" bg-slate-700  text-white">
+      <div className=" ">
         <div>
           <main>{children}</main>
         </div>
