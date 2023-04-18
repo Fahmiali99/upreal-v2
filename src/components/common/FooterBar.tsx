@@ -3,7 +3,7 @@ import React from "react";
 
 function FooterBar() {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 mt-5">
+    <footer className="bg-gray-100 dark:bg-gray-900 mt-5 relative">
       <div className="container mx-auto w-full p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">

@@ -4,6 +4,7 @@ import Hero from "./detail/Hero";
 import Content from "./detail/Content";
 import Portfolio from "./detail/Portfolio";
 import Service from "./detail/Service";
+import Maps from "./detail/Maps";
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <Service />
       <Content />
       <Portfolio />
+      <Maps />
     </div>
   );
 }

@@ -27,7 +27,7 @@ function NavigationBar() {
     },
   ];
   return (
-    <div className=" bg-white-700  dark:bg-gray-900 text-white border-b  dark:border-slate-500">
+    <div className=" bg-white-700  dark:bg-gray-900 text-white border-b  dark:border-slate-800">
       <div className="container mx-auto flex flex-wrap items-center justify-between p-4 md:px-0">
         <a
           href="https://flowbite.com/"
