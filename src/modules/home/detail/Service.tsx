@@ -4,7 +4,7 @@ import { pricing } from "@/utils/pricing";
 function Service() {
   return (
     <div className="container mx-auto my-auto px-4 sm:px-0">
-      <section className="relative z-20 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]">
+      <section className="relative z-20 overflow-hidden  pb-12 lg:pt-[120px] lg:pb-[90px]">
         <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
