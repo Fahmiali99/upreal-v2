@@ -5,10 +5,10 @@ import bgProgres from "@/../../public/assets/home/progres.png";
 import Image from "next/image";
 function Hero() {
   return (
-    <div className="container mx-auto my-auto px-4 sm:px-0 py-20">
+    <div className="container mx-auto my-auto px-4 sm:px-0 ">
       <div className="md:flex justify-between items-center py-10">
         <div>
-          <h1 className="font-bold text-5xl text-black dark:text-white">
+          <h1 className="font-bold text-2xl  md:text-3xl lg:text-4xl xl:text-5xl  text-black dark:text-white">
             We Provide Best Website Design For You
           </h1>
           <p className=" w-3/4 py-5 text-gray-500 dark:text-white font-normal text-base">
