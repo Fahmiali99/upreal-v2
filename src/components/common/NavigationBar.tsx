@@ -70,7 +70,7 @@ function NavigationBar() {
               <li key={idx}>
                 <a
                   href={item.href}
-                  className="block py-2 pl-3 pr-4 text-black dark:text-white"
+                  className="block py-2 pl-3 pr-4 text-black dark:text-white text-sm"
                   aria-current="page"
                 >
                   {item.name}
