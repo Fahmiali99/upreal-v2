@@ -5,7 +5,7 @@ import logo from "@/../../public/assets/home/upreal.png";
 function SplashScreen() {
   return (
     <div className="h-screen flex justify-center items-center ">
-      <Image src={logo} alt="" width={350} />
+      <Image src={logo} className=" animate-pulse " alt="" width={300} />
     </div>
   );
 }

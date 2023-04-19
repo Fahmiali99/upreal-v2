@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import SplashScreen from "@/components/common/SplashScreen";
 
 function App({ Component, pageProps }: AppProps): JSX.Element {
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
@@ -19,19 +20,17 @@ function App({ Component, pageProps }: AppProps): JSX.Element {
     });
   });
 
-  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timeout);
   }, []);
   return (
     <ThemeProvider attribute="class" enableSystem={false} defaultTheme="light">
-      {!isLoaded ? (
-        <SplashScreen />
-      ) : (
+      {loading && <SplashScreen />}
+      {!loading && (
         <>
           <NavigationBar />
           <div className=" ">
