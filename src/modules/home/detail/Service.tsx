@@ -342,6 +342,7 @@ function Service() {
           </div>
         </div>
       </section>
+      <div className=" w-1/5 h-2/5 rounded-full bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 opacity-10 dark:opacity-20 absolute float-left left-0 -bottom-full blur-3xl"></div>
     </div>
   );
 }
