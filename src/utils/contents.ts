@@ -17,9 +17,4 @@ export const contents = [
     about: "Innovative design and convenient for editing, publishing",
     Icons: HiOutlineLightBulb,
   },
-  {
-    name: "Fully Responsive",
-    about: "Show perfectly on your PC desktop, tablet or mobile devices",
-    Icons: MdOutlineDevices,
-  },
 ];
