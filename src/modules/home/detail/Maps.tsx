@@ -3,7 +3,7 @@ import imgMaps from "@/../../public/assets/home/world.png";
 import Image from "next/image";
 function Maps() {
   return (
-    <div className="">
+    <div className=" bg-zinc-700">
       <div className="relative">
         <div className="flex justify-center items-center">
           <Image

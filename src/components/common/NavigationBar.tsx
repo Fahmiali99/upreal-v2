@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import logo from "@/../../public/assets/layout/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function NavigationBar() {
   const [open, setOpen] = useState(false);
@@ -16,12 +17,12 @@ function NavigationBar() {
       href: "/",
     },
     {
-      name: "Blog",
-      href: "/blog",
-    },
-    {
       name: "About",
       href: "/about",
+    },
+    {
+      name: "Contact",
+      href: "/contact",
     },
   ];
 
@@ -43,17 +44,17 @@ function NavigationBar() {
   }, []);
   return (
     <nav
-      className={` fixed w-full z-20 top-0 left-0 border-b border-gray-500 duration-300 ease-in-out ${
+      className={` fixed w-full z-20 top-0 left-0 border-b border-gray-600 duration-300 ease-in-out ${
         scrolled ? " bg-zinc-800 text-white " : "bg-transparent"
       }`}
     >
       <div className="container mx-auto my-auto px-4 sm:px-0  flex flex-wrap items-center justify-between  p-4">
-        <a href="https://flowbite.com/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <Image src={logo} className=" mr-3" width={45} alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             Upreal
           </span>
-        </a>
+        </Link>
         <div className="flex md:order-2">
           <button
             type="button"
@@ -99,7 +100,7 @@ function NavigationBar() {
             {menu.map((item, idx) => (
               <li key={idx}>
                 <a
-                  href="#"
+                  href={item.href}
                   className="block py-2 pl-3 pr-4"
                   aria-current="page"
                 >
