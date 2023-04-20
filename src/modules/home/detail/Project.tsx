@@ -1,15 +1,11 @@
-import React, { Component } from "react";
-import { portfolio } from "@/utils/portfolio";
-import Image from "next/image";
-import Slider, { Settings } from "react-slick";
-
+import React from "react";
 import { BsPlayCircle } from "react-icons/bs";
 import MultipleItems from "@/components/common/SlickItem";
 
 function Project() {
   return (
     <div className=" bg-zinc-700">
-      <div className="h-screen bg-[url('../../public/assets/home/head.png')] flex items-center bg-cover  ">
+      <div className="h-screen bg-[url('https://images.pexels.com/photos/1421903/pexels-photo-1421903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] flex items-center bg-cover  ">
         <div className="container items-center mx-auto my-auto px-4 sm:px-0">
           {/* Section 1 */}
           <div className="md:flex justify-between items-center py-10">
