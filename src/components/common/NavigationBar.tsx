@@ -104,7 +104,7 @@ function NavigationBar() {
                 <li
                   className={
                     router.pathname === item.href
-                      ? "active   decoration-orange-500 underline underline-offset-[10px] md:underline-offset-[32px] decoration-[2px]"
+                      ? "active   decoration-orange-500  underline underline-offset-[10px] md:underline-offset-[32px] decoration-[2px]"
                       : ""
                   }
                 >
