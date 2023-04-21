@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import logo from "@/../../public/assets/layout/logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { withRouter } from "next/router";
 
 function NavigationBar() {
   const [open, setOpen] = useState(false);
@@ -10,6 +11,8 @@ function NavigationBar() {
   const handleOpen = () => {
     setOpen(!open);
   };
+
+  const router = useRouter();
 
   const menu = [
     {
@@ -27,7 +30,6 @@ function NavigationBar() {
   ];
 
   const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,20 +95,24 @@ function NavigationBar() {
           id="navbar-sticky"
         >
           <ul
-            className={`flex flex-col p-4 md:p-0 mt-4 font-medium border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ${
-              scrolled ? "text-white" : "text-black"
+            className={`flex flex-col  md:p-0 mt-4 font-medium   rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ${
+              scrolled ? "text-white" : ""
             }`}
           >
             {menu.map((item, idx) => (
-              <li key={idx}>
-                <a
-                  href={item.href}
-                  className="block py-2 pl-3 pr-4"
-                  aria-current="page"
+              <div key={idx} className="py-2">
+                <li
+                  className={
+                    router.pathname === item.href
+                      ? "active   decoration-orange-500 underline underline-offset-[10px] md:underline-offset-[32px] decoration-[2px]"
+                      : ""
+                  }
                 >
-                  {item.name}
-                </a>
-              </li>
+                  <Link className=" py-2 pl-2 pr-2" href={item.href}>
+                    {item.name}
+                  </Link>
+                </li>
+              </div>
             ))}
           </ul>
         </div>
@@ -115,4 +121,4 @@ function NavigationBar() {
   );
 }
 
-export default NavigationBar;
+export default withRouter(NavigationBar);
