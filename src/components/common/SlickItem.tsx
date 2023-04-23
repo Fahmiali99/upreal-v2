@@ -1,38 +1,64 @@
 import { portfolio } from "@/utils/portfolio";
-import React, { Component } from "react";
-import Slider, { Settings } from "react-slick";
+import React, { Component, useState } from "react";
+import Slider from "react-slick";
+import Modal from "./Modal";
 
-class MultipleItems extends Component<{}, { counter: number }> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      counter: 0,
-    };
-  }
+interface MultipleItemsProps {
+  handleOpen: () => void;
+}
 
-  render() {
-    const settings: Settings = {
-      dots: true,
-      infinite: true,
-      speed: 7000,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      autoplay: true,
-    };
-    return (
-      <div>
-        <Slider {...settings}>
-          {portfolio.map((item, idx) => (
-            <div key={idx} className="  ">
+type Settings = {
+  dots: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  autoplay: boolean;
+};
+
+function SlickItem() {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleImageClick = (image: any) => {
+    setSelectedImage(image);
+    setIsOpen(!isOpen);
+  };
+
+  const settings: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 10000,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+  };
+
+  return (
+    <div>
+      <Slider {...settings}>
+        {portfolio.map((item, idx) => {
+          return (
+            <button
+              key={idx}
+              onClick={() => handleImageClick(item)}
+              className="block text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button"
+            >
               <div className="px-2">
                 <img src={item.link} alt="" />
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    );
-  }
+            </button>
+          );
+        })}
+      </Slider>
+      <Modal open={isOpen} handleClose={handleClose} image={selectedImage} />
+    </div>
+  );
 }
 
-export default MultipleItems;
+export default SlickItem;
