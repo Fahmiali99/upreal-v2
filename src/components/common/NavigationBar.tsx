@@ -100,15 +100,18 @@ function NavigationBar() {
             }`}
           >
             {menu.map((item, idx) => (
-              <div key={idx} className="py-2">
+              <div key={idx} className="py-2 ">
                 <li
                   className={
                     router.pathname === item.href
-                      ? "active   decoration-orange-500  underline underline-offset-[10px] md:underline-offset-[32px] decoration-[2px]"
-                      : ""
+                      ? "active  decoration-orange-500  underline underline-offset-[10px] md:underline-offset-[32px] decoration-[2px]"
+                      : " "
                   }
                 >
-                  <Link className=" py-2 pl-2 pr-2" href={item.href}>
+                  <Link
+                    className=" py-2 pl-2 pr-2  duration-200 rounded-lg hover:text-white hover:bg-slate-600 hover:bg-opacity-30"
+                    href={item.href}
+                  >
                     {item.name}
                   </Link>
                 </li>
