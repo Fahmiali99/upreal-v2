@@ -46,7 +46,7 @@ function SlickItem() {
             <button
               key={idx}
               onClick={() => handleImageClick(item)}
-              className="block text-white  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="block text-white  focus:ring-4  font-medium rounded-lg text-sm py-2.5 text-center "
               type="button"
             >
               <div className="px-2">
