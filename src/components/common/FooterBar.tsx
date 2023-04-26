@@ -19,49 +19,6 @@ function FooterBar() {
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="text-white mb-6 text-sm font-semibold  uppercase text-white">
-                Resources
-              </h2>
-              <ul className=" text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Tailwind CSS
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
-                Follow us
-              </h2>
-              <ul className=" text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
-                  >
-                    Github
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
-                  >
-                    Discord
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
                 Legal
               </h2>
@@ -78,16 +35,75 @@ function FooterBar() {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h2 className="text-white mb-6 text-sm font-semibold  uppercase text-white">
+                Products
+              </h2>
+              <ul className=" text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a href="https://flowbite.com/" className="hover:underline">
+                    Logo Design
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://tailwindcss.com/"
+                    className="hover:underline"
+                  >
+                    Flyer design
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://tailwindcss.com/"
+                    className="hover:underline"
+                  >
+                    Poster design
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://tailwindcss.com/"
+                    className="hover:underline"
+                  >
+                    Poster design
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
+                Adress
+              </h2>
+              <ul className=" text-gray-400 font-medium">
+                <li className="mb-4">
+                  <a href="#" className="hover:underline">
+                    Sumbersari, Jember
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="#" className="hover:underline">
+                    mekkipatria@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:underline">
+                    +6281252188672
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center text-gray-400">
-            © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
-              Flowbite™
+          <span className="text-sm text-gray-500 sm:text-center ">
+            © 2021 Copyright :
+            <a href="https://fahmialihusni.com" className="hover:underline">
+              UEC. Fahmi
             </a>
-            . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
