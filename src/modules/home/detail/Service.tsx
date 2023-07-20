@@ -12,7 +12,21 @@ function Service() {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 justify-center">
           {service.map((item, idx) => (
-            <div key={idx}>{item.about}</div>
+            <div
+              key={idx}
+              data-aos="fade-left"
+              data-aos-delay="400"
+              className="flex justify-center pt-6"
+            >
+              <div
+                className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
+              >
+                <div className="pb-5">
+                  <h1 className="text-2xl font-semibold">{item.title}</h1>
+                  <p className=" text-gray-300">{item.about}</p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
@@ -22,90 +36,24 @@ function Service() {
 
 const service = [
   {
-    about: (
-      <div data-aos="fade-left" className="flex justify-center pt-6">
-        <div
-          className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
-        >
-          <div className="pb-5">
-            <h1 className="text-2xl font-semibold">TYPE 1</h1>
-            <p className=" text-gray-300">Lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-      </div>
-    ),
+    title: "TYPE 1",
+    about: "Lorem ipsum dolor sit amet",
   },
   {
-    about: (
-      <div
-        data-aos="fade-left"
-        data-aos-delay="400"
-        className="flex justify-center pt-6"
-      >
-        <div
-          className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
-        >
-          <div className="pb-5">
-            <h1 className="text-2xl font-semibold">TYPE 1</h1>
-            <p className=" text-gray-300">Lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-      </div>
-    ),
+    title: "TYPE 1",
+    about: "Lorem ipsum dolor sit amet",
   },
   {
-    about: (
-      <div
-        data-aos="fade-left"
-        data-aos-delay="600"
-        className="flex justify-center pt-6"
-      >
-        <div
-          className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
-        >
-          <div className="pb-5">
-            <h1 className="text-2xl font-semibold">TYPE 1</h1>
-            <p className=" text-gray-300">Lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-      </div>
-    ),
+    title: "TYPE 1",
+    about: "Lorem ipsum dolor sit amet",
   },
   {
-    about: (
-      <div
-        data-aos="fade-left"
-        data-aos-delay="800"
-        className="flex justify-center pt-6"
-      >
-        <div
-          className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
-        >
-          <div className="pb-5">
-            <h1 className="text-2xl font-semibold">TYPE 1</h1>
-            <p className=" text-gray-300">Lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-      </div>
-    ),
+    title: "TYPE 1",
+    about: "Lorem ipsum dolor sit amet",
   },
   {
-    about: (
-      <div
-        data-aos="fade-left"
-        data-aos-delay="1000"
-        className="flex justify-center pt-6"
-      >
-        <div
-          className={`bg-cover bg-[url('../../public/assets/home/service.png')] w-72 h-96 flex items-end justify-center`}
-        >
-          <div className="pb-5">
-            <h1 className="text-2xl font-semibold">TYPE 1</h1>
-            <p className=" text-gray-300">Lorem ipsum dolor sit amet </p>
-          </div>
-        </div>
-      </div>
-    ),
+    title: "TYPE 1",
+    about: "Lorem ipsum dolor sit amet",
   },
 ];
 
