@@ -10,7 +10,7 @@ function Service() {
           <h1 className=" text-2xl font-bold pt-2">Service Availabe</h1>
         </div>
 
-        <div className="block md:flex gap-6 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 justify-center">
           {service.map((item, idx) => (
             <div key={idx}>{item.about}</div>
           ))}
